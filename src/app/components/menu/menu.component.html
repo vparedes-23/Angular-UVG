@@ -1,0 +1,64 @@
+<!-- horizontal -->
+<!--<div class="menu">
+
+  <form>
+
+    <div style="text-align: center;">
+      <button (click)="this.regresar()" class="btn btn-primary zoom-button">Cerrar Sesion</button>
+    </div>
+  </form>
+
+</div>-->
+<mat-card class="my-card">
+  <h1> MENU PRINCIPAL  </h1>
+</mat-card>
+
+
+<div class="menu fixed azul-claro">
+  <ul class="menu-items">
+    <li><a (click)="this.regresar()">Cerrar sesion</a></li>
+    <li><a (click)="this.acercaDe()">Acerca de</a></li>
+  </ul>
+</div>
+
+
+<div class="flip">
+    <div class="front" style="background-image: url(../../../assets/Gestion.jpg)">
+       <h1 class="text-shadow">GESTION DE CLIENTES</h1>
+    </div>
+    <div class="back">
+       <h2>Gestion de Cliente</h2>
+       <p>En este módulo usted podrá realizar las siguientes acciones: crear clientes, actualizar sus datos, consultar los clientes por distintos trabajos.</p>
+       <br>
+       <br>
+       <button (click)="this.MenuCliente()" class="btn efecto">INGRESAR</button>
+      </div>
+      <br>
+
+</div>
+<div class="flip">
+    <div class="front" style="background-image: url(../../../assets/Producto.jpg)">
+       <h1 class="text-shadow">GESTION DE PRODUCTOS</h1>
+    </div>
+    <div class="back">
+       <h2>Gestion de Producto</h2>
+       <p>En este módulo usted podrá realizar las siguientes acciones: crear producto, actualizar el producto, actualizar el producto por distintos parametros.</p>
+       <br>
+       <br>
+       <button (click)="this.MenuProducto()" class="btn efecto">INGRESAR</button>
+      </div>
+    <br>
+</div>
+<div class="flip">
+    <div class="front" style="background-image: url(../../../assets/admon.jpg)">
+       <h1 class="text-shadow">ADMINISTRACION DEL SISTEMA</h1>
+    </div>
+    <div class="back">
+       <h2>Administración del Sistema</h2>
+       <p>En este módulo usted podrá realizar las siguientes acciones: crear usuarios, crear surcursales, administrar permisos, administrar roles, entre otros.</p>
+       <br>
+       <br>
+       <button (click)="this.Administracion()" class="btn efecto">INGRESAR</button>
+      </div>
+      <br>
+</div>

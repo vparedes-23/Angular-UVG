@@ -1,0 +1,181 @@
+body {
+  color: #2c3e50;
+  background: #ecf0f1;
+  padding: 0 1em 1em;
+}
+
+h1 {
+  margin: 0;
+  line-height: 2;
+  text-align: center;
+}
+
+h2 {
+  margin: 0 0 .5em;
+  font-weight: normal;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.row {
+  display: -webkit-box;
+  display: flex;
+}
+.row .col {
+  -webkit-box-flex: 1;
+          flex: 1;
+}
+.row .col:last-child {
+  margin-left: 1em;
+}
+
+/* Accordion styles */
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tab {
+  width: 90%;
+  color: white;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.tab-label {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  padding: 1em;
+  background: #2c3e50;
+  font-weight: bold;
+  cursor: pointer;
+  /* Icon */
+}
+.tab-label:hover {
+  background: #1a252f;
+}
+.tab-label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: #2c3e50;
+  background: white;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+.tab-close {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #2c3e50;
+  cursor: pointer;
+}
+.tab-close:hover {
+  background: #1a252f;
+}
+
+input:checked + .tab-label {
+  background: #1a252f;
+}
+input:checked + .tab-label::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.my-card {
+  margin-top: 20px;
+  align-items: center;
+  height: 60px;
+  width: 40%;
+  margin-bottom: 40px;
+}
+
+*/css para el menu emergente/
+* {
+  margin: 0;
+  padding: 0;
+}
+.azul-claro {
+  background: #63cbe8;
+}
+.menu {
+  position: fixed;
+  left: -200px;
+  width: 200px;
+  top: 10px;
+  z-index: 10;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.menu:before {
+  content: "Menu";
+  position: absolute;
+  right: -60px;
+  top: 35%;
+  width: 100px;
+  padding: 10px;
+  height: 40px;
+  background-color: #63cbe8;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  display: block;
+  cursor: pointer;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.menu:hover {
+  left: 0;
+}
+.menu-items {
+  width: 100%;
+  height: 100%;
+}
+.menu-items li a {
+  display: block;
+  text-decoration: none;
+  text-align: justify;
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #fff;
+}
+.menu li a:hover {
+  border-left: 10px solid;
+}
+.menu-items li a:before {
+  position: absolute;
+  width: 70%;
+  height: 1px;
+  content: "";
+  bottom: 0;
+  left: 0;
+  box-shadow: 0px -1px 1px #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.menu-items li a:hover:before {
+  width: 90%;
+}
